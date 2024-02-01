@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;springboot-jdbctemplate&apos; to &apos;springboot.jdbctemplate&apos;" description="Rename resource &apos;springboot-jdbctemplate&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="/springboot-jdbctemplate" name="springboot.jdbctemplate" stamp="1705899563419" updateReferences="true"/>
+</session>

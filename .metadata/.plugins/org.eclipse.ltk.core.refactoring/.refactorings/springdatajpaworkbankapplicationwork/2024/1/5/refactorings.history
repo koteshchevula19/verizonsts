@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Extract local variable &apos;user&apos; from expression &apos;repository.findById(id)&apos;&#x0D;&#x0A;- Original project: &apos;springdatajpaworkbankapplication&apos;&#x0D;&#x0A;- Variable name: &apos;user&apos;&#x0D;&#x0A;- Destination method: &apos;com.springjpa.bankapplication.services.UserService.updateBalance()&apos;&#x0D;&#x0A;- Variable expression: &apos;repository.findById(id)&apos;&#x0D;&#x0A;- Replace occurrences of expression with variable" description="Extract local variable &apos;user&apos;" final="false" id="org.eclipse.jdt.ui.extract.temp" input="/src\/main\/java&lt;com.springjpa.bankapplication.services{UserService.java" name="user" replace="true" selection="1079 24" stamp="1706441572524" varType="false" version="1.0"/>
+</session>

@@ -1,0 +1,20 @@
+package com.springbootmobilerecharge.services;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import org.springframework.web.bind.annotation.RequestBody;
+
+import com.springbootmobilerecharge.entities.Customer;
+import com.springbootmobilerecharge.repository.CustomerRepository;
+
+@Service
+public class CustomerService {
+
+	
+	@Autowired
+	CustomerRepository repo;
+	
+public void  addCustomer( Customer customer) {
+		repo.save(customer);
+	}
+}

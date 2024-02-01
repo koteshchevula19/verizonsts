@@ -1,0 +1,50 @@
+package com.springjpa.bankapplication.entities;
+
+import java.sql.Date;
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.ManyToOne;
+import jakarta.persistence.PrePersist;
+import jakarta.persistence.Temporal;
+import jakarta.persistence.TemporalType;
+
+@Entity
+public class Transaction {
+
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private Integer transactionId;
+	
+	@Temporal(TemporalType.TIMESTAMP)
+	private Date transactionDate;
+	
+	private Double transactionAmount;
+	
+	private String transactionType;
+	
+	private Long transactionMobile;
+	
+	@ManyToOne
+	private User user;
+
+	public Transaction(Date transactionDate, Double transactionAmount, String transactionType, Long transactionMobile,
+			Integer userId) {
+		
+		this.transactionDate =onCreate() ;
+		this.transactionAmount = transactionAmount;
+		this.transactionType = transactionType;
+		this.transactionMobile = transactionMobile;
+		this.user = new User(userId);
+	}
+	 @PrePersist
+	    protected  Date onCreate() {
+		 long millis=System.currentTimeMillis();
+	        transactionDate = new Date(millis);
+	        return transactionDate;
+	    }
+	
+	
+}

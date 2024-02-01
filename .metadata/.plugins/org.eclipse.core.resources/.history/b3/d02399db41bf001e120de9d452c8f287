@@ -1,0 +1,44 @@
+package com.springjpa.bankapplication.security;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Bean;
+import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
+import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
+
+import com.waleed.training.AuthenticationManagerBuilder;
+import com.waleed.training.HttpSecurity;
+import com.waleed.training.MyUserDetailsService;
+import com.waleed.training.PasswordEncoder;
+
+
+@EnableWebSecurity
+public class SecurityConfig extends WebSecurityConfigurerAdapter{
+
+	 @Autowired
+	   UserService userDetailsService;
+
+	    @Override
+	    protected void configure(HttpSecurity http) throws Exception {
+	        http.authorizeRequests()
+	                .antMatchers("/admin").hasRole("ADMIN")
+	                .antMatchers("/users").hasAnyRole("ADMIN", "USER")
+	                .antMatchers("/").permitAll()
+	                .and()
+	                .formLogin();
+	    }
+
+	    @Override
+	    protected void configure(AuthenticationManagerBuilder auth) throws Exception {
+	     auth.userDetailsService(userDetailsService);
+	    }
+
+	    @Bean
+	    PasswordEncoder getPasswordEncoder(){
+	        return NoOpPasswordEncoder.getInstance();
+	    }
+
+
+
+
+
+}

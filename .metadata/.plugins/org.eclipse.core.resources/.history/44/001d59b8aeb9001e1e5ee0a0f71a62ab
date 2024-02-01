@@ -1,0 +1,40 @@
+package com.springdatajpastarter.controllers;
+
+import java.util.Optional;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.springdatajpastarter.entities.User;
+import com.springdatajpastarter.services.UserService;
+
+@RestController
+@RequestMapping("api/v1")
+public class UserController {
+
+	@Autowired
+	UserService service;
+	
+	@GetMapping("/users")
+	Iterable<User> getAllUsersDetails() {
+		return repository.findAll();
+	}
+	
+	Optional<User> getUserDetailsById(Integer id) {
+		return repository.findById(id);
+	}
+	
+	void addNewUser(User user) {
+		 repository.save(user);
+	}
+	
+	void updateExistingUserDetailsById(User user) {
+		repository.save(user);
+	}
+	
+	void deleteExistingUserById(Integer id) {
+		repository.deleteById(id);
+	}
+}

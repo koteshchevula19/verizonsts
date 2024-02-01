@@ -1,0 +1,17 @@
+package com.springjpa.bankapplication.services;
+
+import org.springframework.stereotype.Service;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestBody;
+
+import com.springjpa.bankapplication.entities.Transaction;
+import com.springjpa.bankapplication.entities.User;
+
+@Service
+public class TransactionService {
+
+	public String addNewTransaction( Transaction transaction,Integer userId) {
+		
+		
+	}
+}

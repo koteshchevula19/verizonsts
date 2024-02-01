@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Extract local variable &apos;Customer&apos; from expression &apos;repo.findByMobile(mobile)&apos;&#x0D;&#x0A;- Original project: &apos;springbootmobile&apos;&#x0D;&#x0A;- Variable name: &apos;Customer&apos;&#x0D;&#x0A;- Destination method: &apos;com.springbootmobilerecharge.services.CustomerService.getCustomerBalanceByMobile()&apos;&#x0D;&#x0A;- Variable expression: &apos;repo.findByMobile(mobile)&apos;&#x0D;&#x0A;- Replace occurrences of expression with variable" description="Extract local variable &apos;Customer&apos;" final="false" id="org.eclipse.jdt.ui.extract.temp" input="/src\/main\/java&lt;com.springbootmobilerecharge.services{CustomerService.java" name="Customer" replace="true" selection="577 26" stamp="1706704196917" varType="false" version="1.0"/>
+</session>

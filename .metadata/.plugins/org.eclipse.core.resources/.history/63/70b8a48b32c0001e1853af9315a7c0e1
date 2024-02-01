@@ -1,0 +1,9 @@
+package com.springbootmobilerecharge.repository;
+
+import org.springframework.data.repository.CrudRepository;
+
+import com.springbootmobilerecharge.entities.Customer;
+
+public class CustomerRepository implements CrudRepository<Customer, Integer> {
+
+}

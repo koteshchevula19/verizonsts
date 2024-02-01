@@ -1,0 +1,22 @@
+package com.springjpa.bankapplication.services;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestBody;
+
+import com.springjpa.bankapplication.entities.Transaction;
+import com.springjpa.bankapplication.entities.User;
+import com.springjpa.bankapplication.repositories.TransactionRepository;
+
+@Service
+public class TransactionService {
+
+	@Autowired
+	TransactionRepository repository;
+	
+	public String addNewTransaction( Transaction transaction,Integer userId) {
+		
+		repository.save(transaction);
+	}
+}

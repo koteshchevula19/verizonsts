@@ -1,0 +1,11 @@
+content_assist_lru_history=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?><history maxLHS\="100" maxRHS\="10"><lhs name\="com.springdatajpastarter.entities.User"><rhs name\="com.springdatajpastarter.entities.User"/></lhs><lhs name\="com.springjpa.entities.Student"><rhs name\="com.springjpa.entities.Student"/></lhs><lhs name\="com.springjpa.bankapplication.entities.User"><rhs name\="com.springjpa.bankapplication.entities.User"/></lhs><lhs name\="java.time.temporal.Temporal"><rhs name\="java.time.LocalDateTime"/></lhs><lhs name\="java.time.temporal.TemporalAccessor"><rhs name\="java.time.LocalDateTime"/></lhs><lhs name\="java.time.temporal.TemporalAdjuster"><rhs name\="java.time.LocalDateTime"/></lhs><lhs name\="java.time.chrono.ChronoLocalDateTime"><rhs name\="java.time.LocalDateTime"/></lhs><lhs name\="java.util.Date"><rhs name\="java.sql.Time"/></lhs><lhs name\="java.lang.Cloneable"><rhs name\="java.sql.Time"/></lhs><lhs name\="java.sql.Time"><rhs name\="java.sql.Time"/></lhs><lhs name\="org.springframework.security.config.annotation.SecurityBuilder"><rhs name\="org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder"/></lhs></history>
+content_assist_number_of_computers=16
+content_assist_proposals_background=255,255,255
+content_assist_proposals_foreground=0,0,0
+eclipse.preferences.version=1
+org.eclipse.jdt.internal.ui.navigator.layout=2
+org.eclipse.jdt.internal.ui.navigator.librariesnode=true
+org.eclipse.jdt.ui.formatterprofiles.version=17
+spelling_locale_initialized=true
+useAnnotationsPrefPage=true
+useQuickDiffPrefPage=true

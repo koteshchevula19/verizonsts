@@ -1,0 +1,5 @@
+package com.springbootmobilerecharge.repository;
+
+public class CustomerRepository {
+
+}

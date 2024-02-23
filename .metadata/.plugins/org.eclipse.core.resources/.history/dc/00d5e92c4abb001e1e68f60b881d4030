@@ -1,5 +1,0 @@
-package com.springjpa.bankapplication.repositories;
-
-public interface TransactionRepository {
-
-}

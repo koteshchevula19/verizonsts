@@ -1,9 +1,0 @@
-package com.springjpa.bankapplication.entities;
-
-import jakarta.persistence.Entity;
-
-
-public class Transaction {
-
-	
-}

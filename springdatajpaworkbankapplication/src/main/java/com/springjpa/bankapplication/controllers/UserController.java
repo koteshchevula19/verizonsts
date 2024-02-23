@@ -3,6 +3,7 @@ package com.springjpa.bankapplication.controllers;
 import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -46,6 +47,11 @@ public class UserController {
 	@GetMapping("/users/balance/{id}")
 	public String getBalanceById(@PathVariable Integer id) {
 		return service.getBalanceById(id);
+	}
+	
+	@DeleteMapping("users/{id}")
+public String deleteUserById(@PathVariable Integer id) {
+		return service.deleteUserById(id);
 	}
 	
 }

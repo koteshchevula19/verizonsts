@@ -3,9 +3,6 @@ package com.springjpa.bankapplication.services;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.security.core.userdetails.UserDetails;
-import org.springframework.security.core.userdetails.UserDetailsService;
-import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.PathVariable;
 
@@ -13,7 +10,7 @@ import com.springjpa.bankapplication.entities.User;
 import com.springjpa.bankapplication.exceptions.SignUpException;
 import com.springjpa.bankapplication.exceptions.UserNotFoundException;
 import com.springjpa.bankapplication.repositories.UserRepository;
-import com.springjpa.bankapplication.security.MyUserDetails;
+
 
 
 
@@ -110,6 +107,15 @@ public class UserService {
 		}
 		return null;
 
+	}
+	public String deleteUserById( Integer id) {
+		Optional<User> user=repository.findById(id);
+		if(user.isPresent()) {
+			User existedUser=user.get();
+			repository.delete(existedUser);
+			return "User Deleted Succcessfully";
+		}
+		throw new UserNotFoundException();
 	}
 
 	
